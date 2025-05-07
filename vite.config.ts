@@ -6,7 +6,6 @@ import { ViteRsw } from 'vite-plugin-rsw'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
-  base: 'vite-vue-wasm-starter',
   plugins: [
     vue(),
     vueDevTools(),
@@ -15,7 +14,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': fileURLToPath(new URL('./packages/', import.meta.url)),
+      '#': fileURLToPath(new URL('./crates/', import.meta.url)),
     },
   },
 })

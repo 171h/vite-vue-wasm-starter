@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import init2, { add } from '#/calc/pkg'
+import init, { use_counter } from '#/hello/pkg'
 import { onMounted, ref } from 'vue'
-import init2, { add } from '../crates/calc/pkg'
-import init, { use_counter } from '../crates/hello/pkg'
 
 const val = ref<bigint>(0n)
 
@@ -22,16 +22,16 @@ onMounted(() => {
   <div>
     <div class="flex">
       <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo w-50px vanilla" alt="Vite logo">
+        <img src="@/app/public/vite.svg" class="logo w-50px vanilla" alt="Vite logo">
       </a>
       <a href="https://vue.org" target="_blank">
-        <img src="/vue.svg" class="logo w-50px vanilla" alt="Vue logo">
+        <img src="@/app/public/vue.svg" class="logo w-50px vanilla" alt="Vue logo">
       </a>
       <a href="https://www.typescriptlang.org/" target="_blank">
-        <img src="/typescript.svg" class="logo w-50px vanilla" alt="TypeScript logo">
+        <img src="@/app/public/typescript.svg" class="logo w-50px vanilla" alt="TypeScript logo">
       </a>
       <a href="https://rustwasm.github.io/" target="_blank">
-        <img src="/rust-wasm.png" class="logo w-50px vanilla" alt="Rust Wasm">
+        <img src="@/app/public/rust-wasm.png" class="logo w-50px vanilla" alt="Rust Wasm">
       </a>
     </div>
     <h1>Vite + TypeScript + Rust</h1>
